@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME</title>
+    <link rel="stylesheet" href="assets/fontawesome/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="background()">
+     <script src="assets/fontawesome/all.js"></script>
+     
+     <script src="index.js"></script>
+     <script src="assets/js/script.js"></script>
+     
+     <div class="menu">
+          <input type="text" id="cmd" placeholder="type your comand here...">
+     
+             <i id="o" onclick="start()" class="fas fa-keyboard"></i>
+ 
+ <!-- este símbolo e muito importante -->      
+     <
+        <br><br><br>
+         <div class="bot" style="text-align: center;">
+           
+             <p>bot: <em id="resultado">0</em></p>
+             <!-- calculadora -->
+              <div id="calculadora" style="display: none;"><input id="sp1" type="number" placeholder="número 1"><br>
+               <input id="sp2"type="number" placeholder="número 2"><br>
+               <input id="op" type="text" placeholder="operador ex: + - * /">
+               <button class="c" id="clc">calcular</button><br><br>
+               
+               <p id="res"><i class="fas fa-calculator"></i> resultado: 0</p><br>
+               
+               <input type="button" id="fh" value="fechar" onclick="fecharclc()">
+              </div>
+              
+              <!-- idade -->
+              <div id="idade" style="text-align: center; display: none; ">
+<i class="fas fa-calendar-alt" style="font-size: 140%;"></i><input type="date" id="nas"><br><br>
+                <input type="button" class="all" id="btn2" value="ver"><br><br>
+                <p id="resu">idade: 0</p><br><br>
+                
+                <button class="c" onclick="fecharid()">fechar</button>
+              
+              </div>
+              
+              <div id="htmled" style="display: none;">
+                
+                
+              </div>
+      
+         </div>
+         <br><br>
+              <center><button id="btn" onclick="comandos()">comandos</button></center><br>
+              <center><button id="btnt" onclick="sobre()">Sobre</button></center>
+         </div>
+     
+  
+</body>
+
+</html>

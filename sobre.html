@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SOBRE</title>
+    <link rel="stylesheet" href="assets/fontawesome/all.css">
+    <style>
+      .menu {
+        background: white;
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        width: 380px;
+        text-align: center;
+      }
+      footer {
+        background: white;
+        padding: 10px;
+        border-radius: 15px;
+        margin-top: 10px;
+        text-align: center;
+      }
+      #btn {
+        border: none;
+        background: white;
+        padding: 10px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 100%;
+        margin-left: -20px;
+        margin-top: -20px;
+        text-align: left;
+        float: left;
+      }
+      #btn:hover {
+        transform: scale(1.1)
+      }
+      #btnt {
+        font-size: 150%;
+      }
+      
+    </style>
+</head>
+
+<body onload="background(),data()">
+   <div class="menu">
+     
+      <button id="btn" onclick="back()"><i id="btnt" class="fas fa-chevron-circle-left"></i></button>
+      
+     
+      <p id="hr">Agora São:</p>
+      <p id="d">Hoje E</p>
+      
+      
+      <h1>Sobre</h1>
+      <p>Bot Feito Em 28-05-2021</p>
+      <p>Feito Por: Otoniel</p>
+      
+      <br><br>
+      <em>28-05-2021</em>
+      <p>Ola Usuário Bem Vindo(a)
+      Hoje Dia 28-05-2021 Eu Tive Uma Ideia De Fazer Um Bot
+      Que Fizesse Ações Ao Executar Os Comandos E Ate Que Ficou Legal
+      Este Meu Projeto Bom Por Hoje E Só Ate Mais
+      </p><br>
+     
+   </div>
+     <footer>&copy;Otoniel</footer>
+   
+   
+   <script src="assets/fontawesome/all.js"></script>
+   
+    <script>
+      function data() {
+        let hora = new Date().getHours()
+        let minuto = new Date().getMinutes()
+        let segundo = new Date().getSeconds()
+        
+        let dia = new Date().getDate()
+        let mes = new Date().getMonth()
+        let ano = new Date().getFullYear()
+        
+        let hr = document.getElementById('hr')
+        hr.innerHTML = ` Agora São ${hora}:${minuto}:${segundo}`
+        
+        let data = document.getElementById('d')
+        data.innerHTML = ` Hoje É ${dia}-${mes}-${ano} `
+      }
+      function back() {
+        window.open("index.html")
+      }
+ function background() {
+  let hora = new Date().getHours()
+  
+  let body = document.body
+  
+  if(hora <= 12) {
+    body.style.background = "url('res/img/manhã.jpeg')"
+    body.style.backgroundRepeat = "no-repeat"
+    body.style.backgroundSize = "1500px"
+  }
+  if(hora >= 13 || hora === 18) {
+    body.style.background = "url('res/img/tarde.jpeg')"
+    body.style.backgroundRepeat = "no-repeat"
+    body.style.backgroundSize = "1500px"
+  }
+  if(hora >= 19) {
+    body.style.background = "url('res/img/noite.jpeg')"
+    body.style.backgroundRepeat = "no-repeat"
+    body.style.backgroundSize = "1500px"
+  }
+}
+      
+      
+      
+      
+    </script>
+</body>
+
+</html>

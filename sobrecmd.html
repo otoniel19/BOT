@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COMANDOS</title>
+    <link rel="stylesheet" href="assets/fontawesome/all.css">
+    
+    <style>
+      .menu {
+        text-align: center;
+        padding: 20px;
+        border-radius: 15px;
+        background: white;
+        color: black;
+      }
+      p {
+        font-size: 100%;
+        font-family: 'Staatliches', cursive;
+      }
+      h1 {
+        font-size: 100%;
+        font-family: 'Montserrat', sans-serif;
+        
+      }
+      #btn {
+        border: none;
+        background: none;
+        margin-left: -35px;
+        font-size: 200%;
+        margin-top: -30px;
+        float: left;
+        text-align: left;
+        cursor: pointer;
+      }
+      #btn:hover {
+        transform: scale(1.1)
+      }
+    </style>
+</head>
+
+<body onload="background()">
+     <div class="menu">
+  <button id="btn" onclick="back()"><i class="fas fa-chevron-circle-left"></i></button>  
+       
+       <p>COMANDOS</p>
+       
+       <h1>olá</h1>
+       <h1>data</h1>
+       <h1>horas</h1>
+       <h1>calcular</h1>
+       <h1>idade</h1>
+       
+       
+     </div>
+    
+    
+    
+    <script src="assets/fontawesome/all.js"></script>
+     <script>
+//muda o background de acordo com a hora do sistema
+function background() {
+  let hora = new Date().getHours()
+  
+  let body = document.body
+  
+  if(hora <= 12) {
+    body.style.background = "url('res/img/manhã.jpeg')"
+    body.style.backgroundRepeat = "no-repeat"
+    body.style.backgroundSize = "1500px"
+  }
+  if(hora >= 13 || hora === 18) {
+    body.style.background = "url('res/img/tarde.jpeg')"
+    body.style.backgroundRepeat = "no-repeat"
+    body.style.backgroundSize = "1500px"
+  }
+  if(hora >= 19) {
+    body.style.background = "url('res/img/noite.jpeg')"
+    body.style.backgroundRepeat = "no-repeat"
+    body.style.backgroundSize = "1500px"
+  }
+}
+//função pra voltar 
+function back() {
+  window.open("index.html")
+}
+     </script>
+</body>
+
+</html>
